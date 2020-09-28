@@ -1,0 +1,23 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Header */
+
+.nav-one {
+  height: 32px;
+  background-color: #131313;
+}
+
+.nav-two {
+  height: 48px;
+}
+
+.yellow-spacer div {
+  height: 30px;
+  background-color: #ffdd33;
+}
