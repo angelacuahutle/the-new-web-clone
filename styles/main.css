@@ -8,16 +8,35 @@
 
 /* Header */
 
+.page-header {
+  display: flex;
+}
+
 .nav-one {
-  height: 32px;
+  height: 48px;
   background-color: #131313;
 }
 
-.nav-two {
-  height: 48px;
+.yellow-spacer div {
+  height: 60px;
+  background-color: #ffdd33;
 }
 
-.yellow-spacer div {
-  height: 30px;
-  background-color: #ffdd33;
+/* Cover section */
+
+.cover {
+  height: 400px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+.footer-links {
+  height: 160.5px;
+  background-color: #131313;
+}
+
+.copyright {
+  height: 123.5px;
+  background-color: black;
 }
