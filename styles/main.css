@@ -9,17 +9,24 @@
 /* Header */
 
 .page-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 106px 1fr;
+  grid-template-rows: 48px 60px;
 }
 
 .nav-one {
-  height: 48px;
+  display: none;
   background-color: #131313;
 }
 
-.yellow-spacer div {
-  height: 60px;
+.tnw-logo {
+  background-color: black;
+}
+
+.yellow-spacer {
   background-color: #ffdd33;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
 }
 
 /* Cover section */
@@ -39,4 +46,38 @@
 .copyright {
   height: 123.5px;
   background-color: black;
+}
+
+/* Media */
+
+@media screen and (min-width: 768px) {
+  /* Header */
+
+  .page-header {
+    grid-template-rows: 32px 48px 30px;
+  }
+
+  .tnw-logo {
+    grid-row: 1 / 3;
+  }
+
+  .nav-one {
+    display: block;
+  }
+
+  .yellow-spacer {
+    grid-row: 3 / 4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Header */
+
+  .tnw-logo {
+    display: none;
+  }
+
+  .nav-one {
+    grid-column: 1 / -1;
+  }
 }
