@@ -29,11 +29,59 @@
   grid-row: 2 / 3;
 }
 
-/* Cover section */
+/* Cover */
 
 .cover {
-  height: 400px;
-  background: rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-gap: 8px;
+  margin: 37px 10px 0px 10px;
+  grid-template-rows: repeat(3, 136px);
+  grid-template-columns: 1fr;
+}
+
+.cover article {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Latest */
+
+.latest {
+  margin-top: 68px;
+}
+
+.articles-one,
+.deals {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-news,
+.deal {
+  width: 96%;
+  height: 93px;
+  margin: 5px 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Latest-two */
+
+.latest-two {
+  margin-top: 60px;
+}
+
+.story-investments {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-investment {
+  height: 265px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 15px;
+}
+
+.hidden-story {
+  display: none;
 }
 
 /* Footer */
@@ -51,6 +99,7 @@
 /* Media */
 
 @media screen and (min-width: 768px) {
+
   /* Header */
 
   .page-header {
@@ -68,9 +117,55 @@
   .yellow-spacer {
     grid-row: 3 / 4;
   }
+
+  /* Cover */
+
+  .cover {
+    height: 57vh;
+    margin-top: 65px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .article-one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  /* Latest */
+
+  .articles-one,
+  .deals {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+
+  .story-news,
+  .deal {
+    width: 30%;
+    height: 219px;
+    margin: 10px;
+  }
+
+  /* Latest-two */
+
+  .story-investments {
+    flex-direction: row;
+  }
+
+  .story-investment {
+    flex: 1;
+  }
+
+  /* Footer */
+
+  .copyright {
+    height: 97.5px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+
   /* Header */
 
   .tnw-logo {
@@ -79,5 +174,34 @@
 
   .nav-one {
     grid-column: 1 / -1;
+  }
+
+  /* Latest */
+
+  .story-news,
+  .deal {
+    width: 23%;
+    height: 220px;
+  }
+
+  /* Latest-three */
+
+  .deal {
+  }
+
+  /* Latest-two */
+
+  .hidden-story {
+    display: block;
+  }
+
+  .story-investment {
+    height: 330px;
+  }
+
+  /* Cover */
+
+  .cover {
+    height: 72vh;
   }
 }
