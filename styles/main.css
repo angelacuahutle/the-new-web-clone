@@ -202,14 +202,66 @@
 
 /* Footer */
 
+footer {
+  color: #aaa;
+}
+
 .footer-links {
   height: 160.5px;
   background-color: #131313;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-circles,
+.second-list {
+  display: flex;
+  margin: 16px 0;
+}
+
+.social-media-circles li {
+  background-color: #333333;
+  height: 40px;
+  width: 40px;
+  border-radius: 80px;
+  margin: 0 3px;
+}
+
+.second-list {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.second-list li {
+  margin: 0 5px;
+}
+
+.second-list li:hover {
+  color: white;
 }
 
 .copyright {
   height: 123.5px;
   background-color: black;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copyright li {
+  padding-right: 3px;
+}
+
+.tnw-logo-small,
+.stackpath-logo {
+  height: 9px;
 }
 
 /* Media */
@@ -300,6 +352,15 @@
 
   .copyright {
     height: 97.5px;
+    flex-direction: row;
+  }
+
+  .social-media-circles li {
+    margin: 0 9px;
+  }
+
+  .second-list li {
+    margin: 0 7px;
   }
 }
 
