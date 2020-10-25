@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: Helvetica Neue,Arial,sans-serif; 
+}
+
 /* Wrapper */
 
 .wrapper {
@@ -136,12 +140,80 @@
   display: grid;
   grid-gap: 8px;
   margin: 37px 10px 0px 10px;
-  grid-template-rows: repeat(3, 136px);
+  grid-template-rows: repeat(3, 28vh);
   grid-template-columns: 1fr;
 }
 
 .cover article {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: relative;
+}
+
+.cover article .cover-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 20px; 
+  padding: 0 0 15px 10px;
+  height: 99%;
+}
+
+.cover article .black-gradient {
+  background: rgba(0,0,0,.25) url("https://web.archive.org/web/20201011102328im_/https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/image-gradient.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cover article .cover-img {
+  background-size: cover; 
+  background-position: 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.cover .article-one .cover-img {
+  background-image: url("https://web.archive.org/web/20201011162625if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-11-796x417.png");
+}
+
+.cover .article-two .cover-img {
+  background-image: url("https://web.archive.org/web/20201011162625im_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
+}
+
+.cover .article-three .cover-img {
+  background-image: url("https://web.archive.org/web/20201011162625if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-15-796x417.png");
+}
+
+.cover article .cover-date {
+  display: none;
+  font-size: 14px;
+}
+
+.cover article .cover-section {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
+.cover article h1 {
+  letter-spacing: -.015em;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cover article .small-info {
+  color: hsla(0,0%,100%,.6);
+  display: flex;
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+.cover article .small-info li {
+  padding-right: 8px;
 }
 
 /* Latest */
@@ -311,9 +383,22 @@ footer {
     grid-template-rows: repeat(2, 1fr);
   }
 
+  .cover article .cover-header {
+    padding-left: 12px;
+  }
+
   .article-one {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
+  }
+
+  .cover article h1 {
+    font-size: 20px;
+  }
+
+  .cover .article-one h1 {
+    font-size: 40px;
+    line-height: 40px;
   }
 
   /* Latest */
@@ -378,6 +463,49 @@ footer {
 
   .nav-two {
     grid-column: 1 / -1;
+  }
+
+  /* Cover */
+
+  .cover article .cover-header {
+    padding-left: 20px;
+  }
+
+  .cover article .cover-date {
+    display: block;
+    margin-bottom: auto;   
+    align-self: flex-end;
+    padding: 13px 20px 0 0;
+  }
+
+  .cover .article-one .cover-logo {
+    background: transparent url("https://web.archive.org/web/20201011162656im_/https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg") no-repeat;
+    background-size: contain;
+    width: 100%;
+    max-width: 50%;
+    height: 100%;
+    max-height: 112px;
+    position: absolute;
+    margin: 20px 0 0 20px;
+  }
+
+  .cover .article-one .gradient-background {
+    background: transparent url("https://web.archive.org/web/20201011102323im_/https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/cover-gradient.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    mix-blend-mode: lighten;
+  }
+
+  .cover article h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .cover .article-one h1 {
+    font-size: 50px;
+    line-height: 50px;
   }
 
   /* Latest */
