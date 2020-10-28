@@ -408,6 +408,12 @@ body {
   height: 700px;
 }
 
+.section header h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* Footer */
 
 footer {
