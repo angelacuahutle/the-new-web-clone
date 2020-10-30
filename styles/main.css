@@ -160,7 +160,7 @@ body {
   height: 99%;
 }
 
-.cover article .black-gradient {
+.black-gradient {
   background: rgba(0,0,0,.25) url("https://web.archive.org/web/20201011102328im_/https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/image-gradient.png") no-repeat;
   background-size: 100% 100%;
   position: absolute;
@@ -397,21 +397,195 @@ body {
 /* Sections */
 
 .sections {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .section {
-  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: 10px 5px;
-  height: 700px;
+  display: flex;
+  flex-direction: column;
 }
 
-.section header h4 {
+.section header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-header {
+  position: relative;
+  height: 69vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.section-header > * {
+  padding-bottom: 5px;
+}
+
+.section .section-img {
+  background-size: cover;
+  height: 69vw;
+  width: 90vw;
+  position: absolute;
+}
+
+.section:nth-child(1) .section-img {
+  background-image: url("https://web.archive.org/web/20201022125333if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/amdxlnx-368x276.jpeg");
+}
+
+.section:nth-child(2) .section-img {
+  background-image: url("https://web.archive.org/web/20200326063653if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/YouTube-Dark-368x276.jpg")
+}
+
+.section:nth-child(3) .section-img {
+  background-image: url("https://web.archive.org/web/20200326063653if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/YouTube-Dark-368x276.jpg")
+}
+
+.section:nth-child(4) .section-img {
+  background-image: url("https://web.archive.org/web/20201022125329if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-15-368x276.png");
+}
+
+.section:nth-child(5) .section-img {
+  background-image: url("https://web.archive.org/web/20201019050128if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Untitled-design-13-368x276.jpg");
+}
+
+.section:nth-child(6) .section-img {
+  background-image: url("https://web.archive.org/web/20201019050129if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/mixed-reality-spatial-computing-gq-368x276.png");
+}
+
+.section:nth-child(7) .section-img {
+  background-image: url("https://web.archive.org/web/20201011162625if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/icons8-jargon-gq-368x276.png");
+}
+
+.section:nth-child(8) .section-img {
+  background-image: url("https://web.archive.org/web/20201019050119if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Amazon-Rivian-electric-delivery-van-368x276.jpg");
+}
+
+.section:nth-child(9) .section-img {
+  background-image: url("https://web.archive.org/web/20201022125332if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Snag_1385ac7a-368x276.png");
+}
+
+.section-header h4 {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  line-height: 22px;
+}
+
+.section-header p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.section-header .small-info {
+  color: hsla(0,0%,100%,.6);
+  display: flex;
+  font-size: 13px;
+}
+
+.section-header .small-info li:nth-child(1)::after {
+  content: "\B7";
+  padding: 0 4px;
+}
+
+.section .section-middle {
+  color: #f42;
+  background-color: #fff4f2;
+  display: grid;
+  grid-template-rows: 2.3fr 4.5fr;
+  grid-template-columns: 1fr 96px;
+}
+
+.section-middle .section-middle-img {
+  padding-left: 0;
+  margin-top: 2px;
+  background-position: center;
+  background-size: cover;
+  height: 96px;
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+
+.section:nth-child(1) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201011091915if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/crispr.jpg");
+}
+
+.section:nth-child(2) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010223859if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/IG-Reels-Audio.jpg");
+}
+
+.section:nth-child(3) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010224009if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/table_lamp_200w_in-2.jpg");
+}
+
+.section:nth-child(4) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010202340if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-13.png");
+}
+
+.section:nth-child(5) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010224308if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/card-v-card-bank-account-multiplayer-game.png");
+}
+
+.section:nth-child(6) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010224403if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/data.jpg");
+}
+
+.section:nth-child(7) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010223805if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/amdxlnx.jpeg");
+}
+
+.section:nth-child(8) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201011090017if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Luca-car-hed.jpg");
+}
+
+.section:nth-child(9) .section-middle-img {
+  background-image: url("https://web.archive.org/web/20201010224825if_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/call-of-duty-warzone-modern-warfare-season-6.png");
+}
+
+.section-middle p {
+  font-weight: thin;
+  font-size: 13px;
+  text-transform: uppercase;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding-top: 14px;
+  padding-left: 10px;
+}
+
+.section-middle h5 {
+  font-weight: bold;
+  font-size: 14px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  padding-left: 10px;
+}
+
+.section .section-footer {
+  color: #555;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.section-footer li {
+  padding-bottom: 19px;
+  flex: 1;
+}
+
+.section-footer li::before {
+  content: "*"; 
+  color: #f42;
+  padding-right: 9px;
 }
 
 /* Footer */
@@ -603,8 +777,11 @@ footer {
 
   /* Sections */
 
+  .sections {
+  }
+
   .section {
-    width: 48%;
+    /* width: 48%; */
     /* max-width: 48%; */
   }
 
