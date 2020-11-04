@@ -406,6 +406,7 @@ body {
   margin: 10px 5px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section header {
@@ -778,11 +779,25 @@ footer {
   /* Sections */
 
   .sections {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 20px;
   }
 
   .section {
-    /* width: 48%; */
-    /* max-width: 48%; */
+    margin: 10px 0;
+  }
+
+  .section .section-footer {
+    margin-top: 10px;
+  }
+
+  .section header .section-img,
+  .section header .section-header {
+    height: 35vw;
+  }
+
+  .section header .section-img {
+    background-position: 50%;
   }
 
   /* Footer */
@@ -897,9 +912,13 @@ footer {
 
   /* Sections */
 
-  .section {
-    width: 32%;
-    /* max-width: 32%; */
+  .sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section header .section-img,
+  .section header .section-header {
+    height: 24vw;
   }
 
   /* Cover */
